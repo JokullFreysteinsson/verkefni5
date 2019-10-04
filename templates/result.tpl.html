@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} Yfirlit pöntunar {% endblock %}
+
+{% block content %}
+    <h3> {{ self.title() }} </h3>
+    <div>
+        <table>
+            <tr>
+                <td>Nafn: </td><th>{{name}}</th>
+            </tr>
+            <tr>
+                <td>Tölvupóstfang:</td><th>{{email}}</th>
+            </tr>
+            <tr>
+                <td>Símanúmer:</td><th>{{phone}}</th>
+            </tr>
+            <tr>
+                <td>Heildarverð</td><th>{{price}}</th>
+            </tr>
+            <tr>
+                <td><a href="/karfa" class="butt">Aftur í körfuna</a> </td>
+                <td><a href="/logout" class="butt">Útskáning</a> </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h3>Takk fyrir viðskiptin {{name}}</h3>
+    </div>
+{% endblock %}
