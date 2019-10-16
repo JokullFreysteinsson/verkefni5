@@ -2,25 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block titel %} {% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filname='style.css') }}">
+    <title>{% block title %} {% endblock %}</title><!-- ATH! title ekki tilte -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <!-- ATH! filename ekki filname -->
+    {% block refresh %}
+
+    {% endblock %}
 </head>
 <body>
     <header>
-        <a href="/karfa/"><img class="karfa" src="/static/karfa.jpg"></a>
-        {% if 'karfa' in session: %}
-            <span> ( {{ fjoldi }} )</span>
-        {% else %}
-            <span>( 0 )</span>
-        {% endif %}
+     {% include "teljari.tpl.html" %}
     </header>
     <main>
-        {% block content %}
+    {% block content %}
 
-        {% endblock %}
+    {% endblock %}
     </main>
     <footer>
-        <h3>&copy; 2019 DSG % GJG</h3>
+        <h3>&copy; 2019 Jökull</h3>
     </footer>
 </body>
 </html>
